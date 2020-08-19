@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main">
+<div class="container">
+    <h2>{{detail.name}}</h2><br>
+    {%if detail.image%}
+    <img src="{{detail.image.url}}" height="300"><br><br>
+    {%endif%}
+    <p>{{detail.address}}</p>
+    <p>{{detail.description|linebreaksbr}}</p><br>
+</div>
+</div>
+{%endblock%}
