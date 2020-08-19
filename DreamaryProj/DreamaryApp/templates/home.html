@@ -4,6 +4,24 @@
 <div class="main">
     <h1>home</h1>
     
+        <!-- post -->
+        <div class="article">
+            <h1>home</h1>
+            <!-- 블로그 글 띄우는 부분 -->
+            {% for blog in blogs.all %}
+            <br><br>
+            <div class="card">
+                <h2>{{blog.name}}</h2>
+                {% if blog.image %}
+                <!-- 이미지가 있을때만 출력하기 -->
+                <img width="300px" src="{{ blog.image.url }}" alt="bookimg">
+                {% endif %}
+                <a class="btn btn-4" href="#">수정</a>
+                <a class="btn btn-6" href="#"> 삭제 </a>
+                <a class="btn btn-4" href="#">더보기</a><br><br>
+            </div>
+            {% endfor %}
+        </div>
 </div>
 <footer class="footer">
     <hr>
