@@ -1,10 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Designer
 
-# Create your views here.
 def home(request):
-    return render(request, 'home.html')
-
+    #designer = Designer()
+    designer = Designer.objects.all()
+    #return render(request, 'home.html')
+    return render(request, 'home.html', {'designer':designer})
 
 def create(request):
     if request.method == 'POST':
@@ -17,3 +18,7 @@ def create(request):
         return redirect('home')
     else:
         return render(request, 'new.html')
+
+def detail(request, pk):
+    detail = get_object_or_404(Designer, pk=pk)
+    return render(request, 'detail.html', {'detail':detail})
