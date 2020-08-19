@@ -3,9 +3,9 @@ from .models import Designer
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
-
-
+    blogs = Designer.objects
+    return render(request, 'home.html', {'blogs':blogs})
+    
 def create(request):
     if request.method == 'POST':
         designer = Designer()
