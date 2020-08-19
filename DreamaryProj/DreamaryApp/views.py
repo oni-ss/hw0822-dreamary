@@ -2,10 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Designer
 
 def home(request):
-    #designer = Designer()
-    designer = Designer.objects.all()
-    #return render(request, 'home.html')
-    return render(request, 'home.html', {'designer':designer})
+    designer = Designer.objects
+    return render(request, 'home.html', {'blogs':blogs})
 
 def create(request):
     if request.method == 'POST':
