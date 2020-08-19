@@ -15,7 +15,7 @@
             <img width="300px" src="{{ blog.image.url }}" alt="bookimg">
             {% endif %}
             <a class="btn btn-4" href="#">수정</a>
-            <a class="btn btn-6" href="#"> 삭제 </a>
+            <a class="btn btn-6" href="{%url 'delete' blog.id%}"> 삭제 </a>
             <a class="btn btn-4" href="{%url 'detail' blog.id%}">더보기</a><br><br>
         </div>
         {% endfor %}
