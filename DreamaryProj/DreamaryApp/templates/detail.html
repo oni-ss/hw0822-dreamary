@@ -9,6 +9,10 @@
     {%endif%}
     <p>{{detail.address}}</p>
     <p>{{detail.description|linebreaksbr}}</p><br>
+    <div class="btns">
+        <a class="btn" href="{%url 'update' detail.id%}">수정</a>
+        <a class="btn" href="{%url 'delete' detail.id%}"> 삭제 </a>
+    </div>
 </div>
 </div>
 {%endblock%}
