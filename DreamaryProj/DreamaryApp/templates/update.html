@@ -4,6 +4,12 @@
 {% block title %}프로필 수정하기{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 <div class="container">
     <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="{% static 'images/dreamary_logo.png' %}" alt="드리머리 로고" width="72" height="72">
@@ -36,7 +42,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="inputName">당신을 소개해주세요.</label>주세요.</label>
+                <label for="inputName">당신을 소개해주세요.</label><br>
                 <textarea class="form-control" id="inputDescription" name="description" cols="40" rows="10" required>{{ designer.description }}</textarea>
                 <small id="Name" class="form-text text-muted">고객님들에게 전하고 싶은 말을 적어 주세요.</small>
             </div>
