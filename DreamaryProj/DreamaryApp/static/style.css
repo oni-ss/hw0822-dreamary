@@ -87,7 +87,7 @@
 
 .btn {
     padding: 5px;
-    margin: 5px;
+    margin: 10px 5px;
     background-color: #b2ff73;
     box-shadow: 2px 2px #2facff;
     color: #2facff;
@@ -108,7 +108,7 @@
     background-color: dodgerblue;
     text-align: center;
     border: solid 1px #1977b5;
-    padding: 5px;
+    padding: 10px;
     height: 400px;
     width: 300px;
 }

@@ -29,7 +29,7 @@ def update(request, designer_id):
         return redirect('detail', post.id)
     else:
         return render(request, 'update.html', {'designer' : post})
-      
+
 def create(request):
     if request.method == 'POST':
         designer = Designer()
