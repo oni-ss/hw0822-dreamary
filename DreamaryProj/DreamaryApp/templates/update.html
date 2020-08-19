@@ -13,7 +13,7 @@
     <div class="order-md-1">
         <hr class="mb-4">
         <form action="{% url 'update' designer.id %}" method="POST" enctype="multipart/form-data">
-            {% csrf-token %}
+            {% csrf_token %}
             <div class="mb-3">
                 <label for="inputFile">등록하시는 분을 대표할 수 있는 이미지를 등록해주세요.</label>
                 <div>
@@ -45,4 +45,4 @@
         </form>
     </div>
 </div>
-{% emdblock %}
+{% endblock %}

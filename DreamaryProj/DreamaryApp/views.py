@@ -15,7 +15,7 @@ def introduce(request):
     return render(request, 'introduce.html')
   
 def update(request, designer_id):
-    get_object_or_404(Designer, pk = designer_id)
+    post = get_object_or_404(Designer, pk = designer_id)
 
     if request.method == 'POST':
         if 'image' in request.FILES:

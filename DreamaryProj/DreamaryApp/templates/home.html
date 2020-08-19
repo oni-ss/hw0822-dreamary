@@ -15,7 +15,7 @@
             {% endif %}
             <br><br>
             <div class="btns">
-            <a class="btn" href="#">수정</a>
+            <a class="btn" href="{%url 'update' blog.id%}">수정</a>
             <a class="btn" href="{%url 'delete' blog.id%}"> 삭제 </a>
             <a class="btn" href="{%url 'detail' blog.id%}">더보기</a><br><br>
             </div>
