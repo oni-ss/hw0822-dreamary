@@ -1,10 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Designer
+from django.core.paginator import Paginator
 
 # Create your views here.
 def home(request):
     blogs = Designer.objects
-    return render(request, 'home.html', {'blogs':blogs})
+    blist = Designer.objects.all()
+    paginator = Paginator(blist, 3)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+    return render(request, 'home.html', {'blogs':blogs, 'posts':posts})
     
 def create(request):
     if request.method == 'POST':
