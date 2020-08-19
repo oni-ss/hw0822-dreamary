@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'BBTreeGR';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGR.woff') format('woff');
@@ -10,13 +9,15 @@
 
 @keyframes sheen {
     0% {
-      transform: skewY(-45deg) translateX(0);
+        transform: skewY(-45deg) translateX(0);
     }
+
     100% {
-      transform: skewY(-45deg) translateX(12.5em);
+        transform: skewY(-45deg) translateX(12.5em);
     }
-  }
-  .nav {
+}
+
+.nav {
     display: block;
     position: absolute;
     border-bottom: 1px solid #1b4561;
@@ -24,9 +25,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-  }
-  
-  .button {
+}
+
+.button {
     padding: 0.5em 2em;
     margin: 10px;
     text-align: center;
@@ -39,8 +40,9 @@
     transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
-  }
-  .button:before {
+}
+
+.button:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.5);
     height: 100%;
@@ -51,31 +53,61 @@
     left: -4.5em;
     transform: skewX(-45deg) translateX(0);
     transition: none;
-  }
-  .button:hover {
+}
+
+.button:hover {
     background-color: #b2ff73;
     color: #1977b5;
     border-bottom: 4px solid #1977b5;
-  }
-  .button:hover:before {
+}
+
+.button:hover:before {
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
-  }
+}
 
-  /* 메인 */
-  .main {
-      display: block;
-      position: absolute;
-      top: 20%;
-      width: 100%;
-      height: 100%;
-  }
+/* 메인 */
+.main {
+    font-family: 'BBTreeGR';
+    display: block;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+}
 
-  .footer {
+.footer {
     display: block;
     width: 100%;
     height: 20px;
     position: absolute;
     bottom: 0px;
     text-align: center;
-  }
+}
+
+.btn {
+    padding: 5px;
+    margin: 5px;
+    background-color: #b2ff73;
+    box-shadow: 2px 2px #2facff;
+    color: #2facff;
+    border-radius: 0.5em;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    box-shadow: 2px 2px #b2ff73;
+    color: #2facff;
+}
+
+.btns {
+    text-align: center;
+}
+.card {
+    background-color: dodgerblue;
+    text-align: center;
+    border: solid 1px #1977b5;
+    padding: 5px;
+    height: 400px;
+    width: 300px;
+}
