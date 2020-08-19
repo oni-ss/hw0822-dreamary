@@ -18,6 +18,11 @@ def create(request):
     else:
         return render(request, 'new.html')
 
+def delete (request, pk):
+    blog = get_object_or_404(Designer, pk = pk)
+    blog.delete()
+    return redirect('home')
+
 def detail(request, pk):
     detail = get_object_or_404(Designer, pk=pk)
     return render(request, 'detail.html', {'detail':detail})
