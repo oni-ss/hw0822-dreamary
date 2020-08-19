@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style.css' %}" rel="stylesheet" />
+    <title>Dreamary</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <a href="#" class="button">HOME</a>
+            <a href="#" class="button">HOME</a>
+            <a href="#" class="button">HOME</a>
+            <a href="#" class="button">HOME</a>
+        </div>
+    </nav>
+    <div class="main">
+        {% block content %}
+        {% endblock%}
+    </div>
+</body>
+
+</html>
