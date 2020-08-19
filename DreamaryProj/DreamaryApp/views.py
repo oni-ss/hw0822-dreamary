@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Designer
 
+# Create your views here.
+def home(request):
+    blogs = Designer.objects
+    return render(request, 'home.html', {'blogs':blogs})
+    
 def create(request):
     if request.method == 'POST':
         designer = Designer()
