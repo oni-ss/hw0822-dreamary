@@ -16,7 +16,7 @@ def introduce(request):
   
 def update(request, designer_id):
     get_object_or_404(Designer, pk = designer_id)
-
+    
     if request.method == 'POST':
         if 'image' in request.FILES:
             post.image = request.FILES['image']
@@ -29,7 +29,7 @@ def update(request, designer_id):
         return redirect('detail', post.id)
     else:
         return render(request, 'update.html', {'designer' : post})
-
+        
 def create(request):
     if request.method == 'POST':
         designer = Designer()
