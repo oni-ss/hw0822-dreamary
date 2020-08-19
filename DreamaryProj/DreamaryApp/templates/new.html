@@ -1,1 +1,13 @@
-<h1>글쓰는 부분</h1>
+
+<h1>글쓰기</h1>
+<div class="container">
+    <form method="POST" action="{%url 'create'%}" enctype="multipart/form-data">
+        {%csrf_token%}
+        Name : <input type="text" class="form-control" name="n"><br><br>
+        Image : <input type="file" name="p"><br><br>
+        Address : <input type="text" class="form-control" name="a"><br><br>
+        Description : <br><textarea class="form-control" rows="10" cols="50" name="d"></textarea><br>
+        <br>
+        <input type="submit" value="글쓰기">
+    </form>
+</div>
