@@ -10,7 +10,26 @@ def home(request):
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     return render(request, 'home.html', {'blogs':blogs, 'posts':posts})
-    
+
+def introduce(request):
+    return render(request, 'introduce.html')
+  
+def update(request, designer_id):
+    get_object_or_404(Designer, pk = designer_id)
+
+    if request.method == 'POST':
+        if 'image' in request.FILES:
+            post.image = request.FILES['image']
+        post.name = request.POST['name']
+        post.address = request.POST['address']
+        post.description = request.POST['description']
+
+        post.save()
+
+        return redirect('detail', post.id)
+    else:
+        return render(request, 'update.html', {'designer' : post})
+
 def create(request):
     if request.method == 'POST':
         designer = Designer()

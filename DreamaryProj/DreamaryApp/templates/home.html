@@ -11,13 +11,14 @@
             <h2>{{blog.name}}</h2>
             {% if blog.image %}
             <!-- 이미지가 있을때만 출력하기 -->
-            <img width="300px" src="{{ blog.image.url }}" alt="bookimg">
+            <img width="300px" height="300px" src="{{ blog.image.url }}" alt="bookimg">
             {% endif %}
             <br><br>
             <div class="btns">
-            <a class="btn" href="#">수정</a>
+            <a class="btn" href="{%url 'update' blog.id%}">수정</a>
             <a class="btn" href="{%url 'delete' blog.id%}"> 삭제 </a>
-            <a class="btn" href="{%url 'detail' blog.id%}">더보기</a><br><br>
+            <a class="btn" href="{%url 'detail' blog.id%}">더보기</a>
+            <br><br>
             </div>
         </div>
         {% endfor %}
